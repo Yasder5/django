@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+    {% extends "projetYasser/main.html" %}
+
+<head>
+    <meta charset="UTF-8">
+    {% block title %} formulaire de bienvenue {% endblock %     }
+</head>
+
+<body>
+    {% block content%}
+    <form action="/projetYasser/affiche" method="get">
+        {% csrf_token %}
+        <label for="nom"> Nom :</label>
+        <input type="text" name="nom" />
+        <label for="prenom"> Prenom : </label>
+        <input type="text" name="prenom">
+        <input type="submit" value="envoyer" />
+    </form>
+    {% endblock %}
+</body>
+
+</html>

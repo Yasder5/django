@@ -1,0 +1,6 @@
+<form method="post" action="/projetYasser/affiche/{{id}}/">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="envoyer les données" \>
+    
+</form>
